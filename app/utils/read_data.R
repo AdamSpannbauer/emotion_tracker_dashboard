@@ -1,4 +1,5 @@
 library(data.table)
+library(curl)
 
 # nolint start
 EMOTIONS = c("Angry", "Scared", "Happy", "Sad", "Surprised", "Neutral")

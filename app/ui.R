@@ -1,4 +1,6 @@
 library(shiny)
+library(shinythemes)
+
 
 navbarPage(
   title = "Emotion Tracker",

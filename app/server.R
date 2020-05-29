@@ -1,3 +1,7 @@
+library(shiny)
+library(data.table)
+
+
 function(input, output, session) {
   emote_df = reactive({
     if (input$scl_radio == "Use scaled data") {

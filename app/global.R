@@ -1,7 +1,7 @@
 library(data.table)
-library(glue)
 library(ggplot2)
 source("utils/read_data.R")
+
 
 # nolint start
 EMOTIONS = c("Angry", "Scared", "Happy", "Sad", "Surprised", "Neutral")
