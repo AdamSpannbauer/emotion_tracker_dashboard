@@ -39,7 +39,7 @@ navbarPage(
             inputId = "scl_radio",
             label = "",
             choices = c("Use raw data", "Use scaled data"),
-            selected = "Use scaled data"
+            selected = "Use raw data"
             )  # radioButtons
           )  # inputPanel
         ),  # column
