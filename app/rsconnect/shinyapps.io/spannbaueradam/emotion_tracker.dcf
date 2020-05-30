@@ -1,0 +1,12 @@
+name: emotion_tracker
+title: emotion_tracker
+username:
+account: spannbaueradam
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2376491
+bundleId: 3204570
+url: https://spannbaueradam.shinyapps.io/emotion_tracker/
+when: 1590758114.21719
+asMultiple: FALSE
+asStatic: FALSE

@@ -3,9 +3,16 @@ library(shinythemes)
 
 
 navbarPage(
-  title = "Emotion Tracker",
+  windowTitle = "Emotion Tracker",
+  title =
+    div(
+      img(src='i_have_feelings.png',
+          style="margin-top: -14px; padding-right:10px;padding-bottom:10px",
+          height = 60)
+      ),
   theme = shinythemes::shinytheme("flatly"),
   tabPanel(
+    tags$head(tags$link(rel="shortcut icon", href="i_have_feelings_small.png")),
     title =  "Summary Charts",
     fluidRow(
       column(
