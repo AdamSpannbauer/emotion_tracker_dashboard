@@ -6,13 +6,16 @@ navbarPage(
   windowTitle = "Emotion Tracker",
   title =
     div(
-      img(src='i_have_feelings.png',
-          style="margin-top: -14px; padding-right:10px;padding-bottom:10px",
+      img(src = "i_have_feelings.png",
+          style = "margin-top: -14px; padding-right:10px;padding-bottom:10px",
           height = 60)
       ),
   theme = shinythemes::shinytheme("flatly"),
   tabPanel(
-    tags$head(tags$link(rel="shortcut icon", href="i_have_feelings_small.png")),
+    tags$head(
+      tags$link(rel = "shortcut icon",
+                href = "i_have_feelings_small.png")
+      ),
     title =  "Summary Charts",
     fluidRow(
       column(
@@ -39,7 +42,7 @@ navbarPage(
             inputId = "app_select",
             label = "Include Apps:",
             choices = APPS,
-            selected = APPS,
+            selected = APPS_OF_INTEREST,
             multiple = TRUE
           ),  # selectInput
           radioButtons(
@@ -53,8 +56,8 @@ navbarPage(
       column(
         width = 8,
         align = "center",
-        plotOutput("mean_app_emotion_plot", width = "90%", height = 300),
-        plotOutput("emotion_by_hour_plot", width = "90%", height = 300),
+        plotOutput("plot_1", width = "90%", height = 300),
+        plotOutput("plot_2", width = "90%", height = 300),
         )  #column
       )  # fluidRow
     )  # tabPanel

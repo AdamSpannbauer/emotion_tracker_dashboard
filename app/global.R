@@ -10,7 +10,11 @@ EMOTION_DF = read_data()
 
 # Create sort order of app names for alphabetical with "NA" at end
 non_na_apps = setdiff(unique(EMOTION_DF$active_app_name), "NA")
+
 APPS = c(sort(non_na_apps), "NA")
+APPS_OF_INTEREST = c("PyCharm", "RStudio", "Microsoft Excel",
+                     "Tableau Public", "Terminal")
+
 EMOTION_DF[, active_app_name := factor(active_app_name, levels = rev(APPS))]
 
 SCL_EMOTION_DF = data.table::copy(EMOTION_DF)

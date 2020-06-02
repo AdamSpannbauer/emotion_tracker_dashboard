@@ -17,6 +17,7 @@ read_data = function(std_scale=FALSE) {
   # Convert blank apps to "NA"
   emotion_df[, active_app_name := trimws(active_app_name)]
   emotion_df[active_app_name == "", active_app_name := "NA"]
+  emotion_df[active_app_name == "pycharm", active_app_name := "PyCharm"]
 
   # Create columns for date parts
   emotion_df[, timestamp := as.POSIXct(timestamp, tz = "GMT")]
