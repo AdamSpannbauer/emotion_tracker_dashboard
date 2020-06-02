@@ -35,7 +35,7 @@ navbarPage(
             label = "Include Dates:",
             min = MIN_DATE,
             max = MAX_DATE,
-            start = MIN_DATE,
+            start = A_MONTH_AGO,
             end = MAX_DATE
           ),  # dateRangeInput
           selectInput(
