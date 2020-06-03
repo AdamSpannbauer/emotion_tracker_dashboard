@@ -22,12 +22,12 @@ function(input, output, session) {
   })
 
 
-  output$plot_1 = renderPlot({
+  output$plot_1 = plotly::renderPlotly({
     mean_app_emotion_plot(emote_df(), EMOTIONS)
   })
 
 
-  output$plot_2 = renderPlot({
+  output$plot_2 = plotly::renderPlotly({
     emotion_by_hour_plot(emote_df(), EMOTIONS)
   })
 }

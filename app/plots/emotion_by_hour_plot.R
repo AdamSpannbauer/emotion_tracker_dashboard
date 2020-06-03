@@ -12,12 +12,21 @@ emotion_by_hour_plot = function(
 
   plot_df = plot_df[!is.na(score) & !is.na(emotion), ]
   plot_df = plot_df[, .(score = mean(score)), by = .(ts_hour, emotion)]
+  plot_df = plot_df[order(ts_hour), ]
 
-  ggplot(plot_df, aes(x = ts_hour, y = score, color = emotion)) +
-    geom_line() +
-    labs(x = "Hour of Day",
-         y = "Mean Score",
-         title = "Mean Expression by Hour",
-         color = "") +
-    theme(legend.position = "left")
+  plotly::plot_ly(
+    plot_df,
+    x = ~ts_hour,
+    y = ~score,
+    color = ~emotion,
+    type = "scatter",
+    mode = "lines"
+  ) %>%
+    plotly::layout(
+      hovermode = "compare",
+      yaxis = list(title = "Mean Score"),
+      xaxis = list(title = "Hour of Day"),
+      title = ""
+    ) %>%
+    plotly::config(displayModeBar = FALSE)
 }

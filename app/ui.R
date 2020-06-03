@@ -56,9 +56,12 @@ navbarPage(
       column(
         width = 8,
         align = "center",
-        plotOutput("plot_1", width = "90%", height = 300),
-        plotOutput("plot_2", width = "90%", height = 300),
+        tags$h5("Mean Expression by App"),
+        plotly::plotlyOutput("plot_1", width = "90%", height = 300),
+        tags$h5("Mean Expression by Hour"),
+        plotly::plotlyOutput("plot_2", width = "90%", height = 300),
         )  #column
-      )  # fluidRow
+      ),  # fluidRow
+    br(), br(), br()
     )  # tabPanel
   )  # navbarPage
